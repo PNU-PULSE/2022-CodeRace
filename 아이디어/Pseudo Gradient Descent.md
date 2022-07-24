@@ -5,9 +5,9 @@ Gradient Descent란 머신러닝 모델의 오차를 나타내는 Loss Function�
 
 ![1](./img/3.png)
 
-Gradient Descent에서 매개 변수의 학습은 Loss Function을 각 매개변수에 대하여 편미분을 수행하여 Loss Function의 기울기가 낮은 방향으로 이루어진다. 하지만 순수한 Gradient Descent는 항상 기울기를 따라 학습이 이루어지기에 그림 1의 빨간 별이 표시된 것과 같은 Local Optimum에 빠지면 탈출할 수 가 없어 모델의 오차를 더 이상 줄이지 못한다. <br>
+Gradient Descent에서 매개 변수의 학습은 Loss Function을 각 매개변수에 대하여 편미분을 수행하여 Loss Function의 기울기가 낮은 방향으로 이루어진다. 하지만 순수한 Gradient Descent는 항상 기울기를 따라 학습이 이루어지기에 그림에서 빨간 별이 표시된 것과 같은 Local Optimum에 빠지면 탈출할 수 가 없어 모델의 오차를 더 이상 줄이지 못한다. <br>
 
-그래서 이에 대한 해결책으로 Gradient Descent와 함께 momentum이라는 일종의 관성력을 추가해서 학습하기도 하는데, momentum은 마치 현실의 관성력이 그러하듯 과거에 진행해왔던 방향으로 계속 진행하려는 것을 말하며 이 덕분에 일시적인 머신러닝 모델의 학습과정에서 Local Optimum에 빠지더라도 모델은 그림 -1에서의 노란색 화살표와 같이 탈출 할 수 있게 된다. <br>
+그래서 이에 대한 해결책으로 Gradient Descent와 함께 momentum이라는 일종의 관성력을 추가해서 학습하기도 하는데, momentum은 마치 현실의 관성력이 그러하듯 과거에 진행해왔던 방향으로 계속 진행하려는 것을 말하며 이 덕분에 일시적인 머신러닝 모델의 학습과정에서 Local Optimum에 빠지더라도 모델은 그림에서의 노란색 화살표와 같이 탈출 할 수 있게 된다. <br>
 또한 일반적으로는 언제 모델의 오차가 가장 최소화되었는 지 알 수 없어 여러 가지 장치들을 동원하는 데 그 중 하나가 모델이 일정 횟수 이상 학습을 하더라도 오차의 개선이 없으면 학습을 종료하는 Early Stop이다. <br>
 
 이때 산지니가 해야할 것은 2개의 매개 변수를 가지는 머신러닝 모델이 momentum과 Early Stop을 적용한 gradient descent를 통해 학습할 때의 Loss Function의 값의 변화를 그래프로 그리는 것이다. 하지만 산지니는 미분을 할 줄 모르기에 정확한 계산을 하기보다는 Loss Function의 공간을 전역탐색하고 대충 그걸 바탕으로 그럴듯 하게 경로를 구하기로 했다. <br>
