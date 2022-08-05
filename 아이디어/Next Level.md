@@ -42,10 +42,10 @@ ABAD
 DDDD
 BBBB
 CCCC
-1131
-1221
-3333
-1114
+1 1 2 1
+1 2 2 1
+3 3 3 3
+1 1 1 4
 0 0 0 1 dp greedy 0 0 0 0 0 0
 0 0 0 1 dp sort 1 graph dfs 0 0 0
 1 greedy sort 1 sort dp 0 0 0 0 0 0
