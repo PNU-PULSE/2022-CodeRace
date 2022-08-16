@@ -2,8 +2,8 @@ mirror = {}
 turn = {}
 
 ALPHABET =      'abcdefghijklmnopqrstuvwxyz^$#'
-MIRROR_STR =    '.d.b....i..lmnoqp....vwx..$^#'
-TURN_STR =      '.q.p.......l..odb.s....x.z$^#'
+MIRROR_STR =    '.d.b....i..lm.oqp....vwx..$^#'
+TURN_STR =      '.q.p.......l.uodb.s.n..x.z$^#'
 
 for _key, _value in zip(ALPHABET, MIRROR_STR):
     mirror[_key] = _value
@@ -68,7 +68,9 @@ def longestTurnPalindrome(s):
 # exp_str = "aaapqbdcksppddxbboqqppodd"
 exp_str = input().strip()
 
-answer = max([longestTurnPalindrome(exp_str),longestMirrorPalindrome(exp_str)], key=len)
+answer_cand = [longestTurnPalindrome(exp_str),longestMirrorPalindrome(exp_str)]
+answer_cand = sorted(answer_cand)
+answer = max(answer_cand, key=len)
 if answer:
     print(answer)
 else:
